@@ -1,1 +1,22 @@
-/* CSS 스타일 */
+@import url("./normalize.css");
+@import url("./reset.css");
+
+body {
+  background-color: skyblue;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight: 900;
+}
+
+.visual {
+  background-color: lightgoldenrodyellow;
+}
+.main {
+  background-color: lightcoral;
+}
+.slogan {
+  background-color: lightgreen;
+}
+.footer {
+  background-color: lightseagreen;
+}
+
