@@ -2,7 +2,7 @@
 @import url("./reset.css");
 
 body {
-  background-color: skyblue;
+  background: skyblue;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-weight: 900;
 }
@@ -16,32 +16,32 @@ body {
 
 /* 헤더 */
 .header {
-  background-color: lightsalmon;
+  background: lightsalmon;
   padding: 0 30px;
   height: 15vh;
 }
 /* 비주얼 */
 .visual {
-  background-color: lightgoldenrodyellow;
+  background: lightgoldenrodyellow;
   height: 10vh;
 }
 /* 메인 */
 .main {
-  background-color: lightcoral;
+  background: lightcoral;
   height: 50vh;
 }
 /* 슬로건 */
 .slogan {
-  background-color: lightgreen;
+  background: lightgreen;
   height: 10vh;
 }
 /* 풋터 */
 .footer {
-  background-color: lightseagreen;
+  background: lightseagreen;
 }
 
 .footer-inner {
-  background-color: lightslategray;
+  background: lightslategray;
   height: 15vh;
 }
 
