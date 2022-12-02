@@ -62,6 +62,7 @@ body {
 /* 풋터 */
 .footer {
   background: lightseagreen;
+  width: 940px;
 }
 
 .footer-inner {
