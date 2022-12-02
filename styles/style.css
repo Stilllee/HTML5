@@ -32,13 +32,8 @@ body {
 .main {
   background: lightcoral;
   height: 50vh;
-  display: flow-root;
-  padding: 0 15px;
-}
-
-.group {
-  margin: 0 15px;
-  float: left;
+  display: flex;
+  flex-direction: row;
 }
 
 .group1 {
