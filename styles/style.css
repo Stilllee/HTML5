@@ -12,6 +12,11 @@ body {
   font-weight: 900;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 /* 레이아웃 */
 .header, .visual, .main, .slogan, .footer-inner {  
   width: 940px;  
@@ -31,6 +36,10 @@ body {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
+}
+
+.member li {
+  text-transform: uppercase;
 }
 
 /* .member li:nth-child(n+2)::before{
