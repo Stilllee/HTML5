@@ -1,3 +1,4 @@
+@import url("./fonts.css");
 @import url("./normalize.css");
 @import url("./reset.css");
 
@@ -8,7 +9,7 @@
   width: 1px;
   height: 1px;
   overflow: hidden;
-  /* clip-path:polygon(0 0, 0 0, 0 0); */
+  clip-path:polygon(0 0, 0 0, 0 0);
 }
 
 /* 기본 스타일 */
@@ -56,6 +57,7 @@ body {
   position: absolute;
   top: 45px;
   left: 60px;
+  z-index: 10;
 }
 
 /* 텍스트 링크 모음 */
@@ -76,12 +78,9 @@ body {
 .member a{
   padding: 6px 10px;
   display: inherit;
-}
-/* 마지막 li요소에 포함된 a요소를 선택하여 오른쪽 padding값을 0으로 재정의 하는 방법 */
-.member li:last-child a {
-  /* padding-right: 0; */
   text-transform: uppercase;
 }
+/* 마지막 li요소에 포함된 a요소를 선택하여 오른쪽 padding값을 0으로 재정의 하는 방법 */
 
 .divider {
   margin-right: 4px;
@@ -89,7 +88,7 @@ body {
 
 /* 메인 메뉴 */
 .navigation{
-  padding-bottom: 80px;
+  padding-bottom: 40px;
 }
 .menu {
   border-top: 2px solid #212121;
@@ -97,8 +96,20 @@ body {
   border-radius: 0 0 5px 5px;
   padding-left: 230px;
   height: 47px;
+  position: relative;
 }
 
+.menu > li:nth-child(-n+3) {
+  position: relative;
+}
+
+.menu-item {
+  position: relative;
+  float: left;  
+  border-left: 2px solid #fff;  
+}
+
+/* 구체성 -> 10점 */
 .menu-button {
   border: 0;  
   background: transparent;
@@ -110,6 +121,7 @@ body {
   text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
 }
 
+/* 구체성 -> 20점 */
 .is-active .menu-button {
   color: #ff0;
 }
@@ -140,23 +152,59 @@ html에대해, 가상요소는 형제관계.
 
 */
 
-.menu li {
-  float: left;
-}
-
-.menu-item {
-  float: left;  
-  border-left: 2px solid #fff;  
-}
-
 .sub-menu {
-  background-color: pink;
   position: absolute;
+  top: 47px;
   display: none;
+  padding: 4px 0;
+}
+
+.menu-html, .menu-css, .menu-standards {
+  left: 0;
+}
+
+.menu-accessibility, .menu-qna, .menu-archive {
+  right: 0;
 }
 
 .is-active .sub-menu {
   display: block;
+  white-space: nowrap;
+}
+
+.sub-menu li {
+  display: inline-block;
+  padding: left 1em;
+}
+
+.sub-menu a::before {
+  content: "\f192";
+  font-family: 'fontello';
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sub-menu a:hover::before, .sub-menu a:focus::before {
+  content: "\e800";
+}
+
+.sub-menu a {
+  display: inline-block;
+  padding: 6px 0;
+}
+
+.sub-menu a:hover, .sub-menu a:focus {
+  color: #f00;
 }
 
 /* 비주얼 */

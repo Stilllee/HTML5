@@ -7,6 +7,9 @@
   <title>웹카페</title>
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css" />
   <link rel="stylesheet" href="./styles/style.css" />
+  <script src="./js/main.js" defer></script>
+  <!-- <script src="./js/jquery.min.js"></script>
+  <script src="./js/menu-tab.js"></script> -->
 </head>
 <body>
   <header class="header">
@@ -26,7 +29,7 @@
       <!-- a11y 숫자 1이다.. l아니다.. -->
       <h2 class="a11y-hidden">메인 메뉴</h2>
       <ul class="menu">
-        <li class="menu-item is-active">
+        <li class="menu-item">
           <button type="button" class="menu-button">HTML에 대해</button>
           <ul class="sub-menu menu-html">
             <li>
@@ -40,7 +43,7 @@
             </li>
           </ul>
         </li>
-        <li class="menu-item">
+        <li class="menu-item ">
           <button type="button" class="menu-button">CSS에 대해</button>
           <ul class="sub-menu menu-css">
             <li>
@@ -57,7 +60,7 @@
             </li>
           </ul>
         </li>
-        <li class="menu-item">
+        <li class="menu-item ">
           <button type="button" class="menu-button">웹표준</button>
           <ul class="sub-menu menu-standards">
             <li>
@@ -71,7 +74,7 @@
             </li>
           </ul>
         </li>
-        <li class="menu-item">
+        <li class="menu-item" >
           <button type="button" class="menu-button">웹 접근성</button>
           <ul class="sub-menu menu-accessibility">
             <li>
@@ -88,7 +91,7 @@
             </li>
           </ul>
         </li>
-        <li class="menu-item">
+        <li class="menu-item ">
           <button type="button" class="menu-button">묻고 답하기</button>
           <ul class="sub-menu menu-qna">
             <li>
@@ -108,7 +111,7 @@
             </li>
           </ul>
         </li>
-        <li class="menu-item">
+        <li class="menu-item ">
           <button type="button" class="menu-button">자료실</button>
           <ul class="sub-menu menu-archive">
             <li>
@@ -128,7 +131,11 @@
       </ul>
     </nav>
   </header>
-  <div class="visual">비주얼</div>
+  <div class="visual">
+    <div class="visual-text">
+      Web Standards &amp; Accessibility
+    </div>
+  </div>
   <main class="main">
     <div class="group group1">그룹1</div>
     <div class="group group2">그룹2</div>
@@ -137,6 +144,6 @@
   <article class="slogan">슬로건</article>
   <footer class="footer">
     <div class="footer-inner">풋터</div>
-  </footer>
+  </footer>  
 </body>
 </html>
