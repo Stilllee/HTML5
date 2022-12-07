@@ -1,0 +1,282 @@
+@import url("./fonts.css");
+@import url("./normalize.css");
+@import url("./reset.css");
+
+
+/* 숨김 콘텐츠 */
+.a11y-hidden{
+  position:absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path:polygon(0 0, 0 0, 0 0);
+}
+
+/* 기본 스타일 */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+/* 링크 스타일 */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 본문 스타일 */
+
+body {
+  /* em, rem 단위를 사용해보기 */
+  font-size: 1.4rem;
+  color: #212121;
+  background: #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%);
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+/* 레이아웃 */
+.header, .visual, .main, .slogan, .footer-inner {  
+  width: 940px;  
+  margin: 0 auto;
+}
+
+/* 헤더 */
+.header {
+  background: #fff;
+  padding: 0 30px;
+  border-radius: 0 0 15px 15px;
+  position: relative;
+}
+
+/* 로고 */
+.logo {
+  position: absolute;
+  top: 45px;
+  left: 60px;
+  z-index: 10;
+}
+
+/* 텍스트 링크 모음 */
+.member {
+  text-align: right;
+  padding: 4px 0;
+  /* position 속성을 활용하여 .member 영역을 오른쪽으로 10px만큼 이동하기 */
+  /* position: relative; 
+  right: -10px; */
+  /* transform 속성을 활용하여 .member 영역을 오른쪽으로 10px만큼 이동하기 */
+  transform: translateX(10px);
+}
+
+.member li {
+  display: inline-block;
+}
+
+.member a{
+  padding: 6px 10px;
+  display: inherit;
+  text-transform: uppercase;  
+}
+/* 마지막 li요소에 포함된 a요소를 선택하여 오른쪽 padding값을 0으로 재정의 하는 방법 */
+
+.divider {
+  margin-right: 4px;
+}
+
+/* 메인 메뉴 */
+.navigation{
+  padding-bottom: 40px;
+}
+.menu {
+  border-top: 2px solid #212121;
+  background: #e85e2c linear-gradient(to bottom, #ef9126 0%, #e85e2c 35%, #e85e2c 70%, #ef9126 100%);
+  border-radius: 0 0 5px 5px;
+  padding-left: 230px;
+  height: 47px;
+  position: relative;
+}
+
+.menu > li:nth-child(-n+3) {
+  position: relative;
+}
+
+.menu-item {
+  position: relative;
+  float: left;  
+  border-left: 2px solid #fff;  
+}
+
+/* 구체성 -> 10점 */
+.menu-button {
+  border: 0;  
+  background: transparent;
+  padding: 0 23px;
+  line-height: 45px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+}
+
+/* 구체성 -> 20점 */
+.is-active .menu-button {
+  color: #ff0;
+}
+
+/* 
+미션 : is-active 버튼에 밑줄을 넣어라! 
+팁 : .menu-button 에 바로 border-bottom을 지정하면
+버튼 전체에 구분선이 보여지기 때문에
+::before와 ::after 같은 가상 요소 선택자를 이용하면
+해당 문제를 해결할 수 있습니다. ^^
+*/
+
+.is-active .menu-button::after {
+  content: "";
+  display: block;
+  border-top: 2px solid #212121;
+}
+/* 
+line-height를 줬기 때문에 딱 밑에 선이 붙는 것!
+button에
+padding 처리를 했다면 불편했을 것
+
+어떻게 길이도 딱 떨어지느냐?
+html에대해, 가상요소는 형제관계.
+그들의 부모에게 패딩을 주었기 때문이다.
+
+가상요소를 생성하면 inline으로 생성되기 때문에 이를 block으로 만들어 준 것. 
+
+*/
+
+.sub-menu {
+  position: absolute;
+  top: 47px;
+  display: none;
+  padding: 4px 0;
+}
+
+.menu-html, .menu-css, .menu-standards {
+  left: 0;
+}
+
+.menu-accessibility, .menu-qna, .menu-archive {
+  right: 0;
+}
+
+.is-active .sub-menu {
+  display: block;
+  white-space: nowrap;
+}
+
+.sub-menu li {
+  display: inline-block;
+  padding: left 1em;
+}
+
+.sub-menu a::before {
+  content: "\f192";
+  font-family: 'fontello';
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sub-menu a:hover::before, .sub-menu a:focus::before {
+  content: "\e800";
+}
+
+.sub-menu a {
+  display: inline-block;
+  padding: 6px 0;
+}
+
+.sub-menu a:hover, .sub-menu a:focus {
+  color: #f00;
+}
+
+/* 비주얼 */
+/* at sigh rule => @, ~적용할거야 라고 선언하는 것 */
+
+@keyframes moveEffect {
+  0% {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.2);
+    transform: translate(0,0);
+  } 
+  100% {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 1);
+    transform: translate(400px,75px);
+  }
+}
+
+.visual {
+  background: lightgoldenrodyellow;
+  height: 120px;
+  position: relative;
+}
+
+.visual-text {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: gold;
+  animation-name: moveEffect;
+  animation-duration: 2000ms;
+  animation-fill-mode: forwards;
+  display: inline-block;
+}
+
+/* 메인 */
+.main {
+  background: lightcoral;
+  height: 50vh;
+  display: flow-root;
+  padding: 0 15px;
+}
+
+.group {
+  margin: 0 15px;
+  float: left;
+}
+
+.group1 {
+  background-color: tomato;
+  width: 250px;
+}
+.group2 {
+  background-color: teal;
+  width: 380px;
+}
+.group3 {
+  background-color: thistle;
+  width: 190px;
+}
+
+/* 슬로건 */
+.slogan {
+  background: lightgreen;
+  height: 10vh;
+  clear: both;
+}
+/* 풋터 */
+.footer {
+  background: #ccc
+    linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%);
+}
+
+.footer-inner {
+  background: lightslategray;
+  height: 15vh;
+}
