@@ -114,12 +114,35 @@ body {
   color: #ff0;
 }
 
+/* 
+미션 : is-active 버튼에 밑줄을 넣어라! 
+팁 : .menu-button 에 바로 border-bottom을 지정하면
+버튼 전체에 구분선이 보여지기 때문에
+::before와 ::after 같은 가상 요소 선택자를 이용하면
+해당 문제를 해결할 수 있습니다. ^^
+*/
+
 .is-active .menu-button::after {
   content: "";
   display: block;
   border-top: 2px solid #212121;
 }
+/* 
+line-height를 줬기 때문에 딱 밑에 선이 붙는 것!
+button에
+padding 처리를 했다면 불편했을 것
 
+어떻게 길이도 딱 떨어지느냐?
+html에대해, 가상요소는 형제관계.
+그들의 부모에게 패딩을 주었기 때문이다.
+
+가상요소를 생성하면 inline으로 생성되기 때문에 이를 block으로 만들어 준 것. 
+
+*/
+
+.menu li {
+  float: left;
+}
 
 .menu-item {
   float: left;  
@@ -130,6 +153,10 @@ body {
   background-color: pink;
   position: absolute;
   display: none;
+}
+
+.is-active .sub-menu {
+  display: block;
 }
 
 /* 비주얼 */
