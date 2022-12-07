@@ -7,9 +7,8 @@
   position:absolute;
   width: 1px;
   height: 1px;
-  margin: -1px;
   overflow: hidden;
-  clip-path:polygon(0 0, 0 0, 0 0);
+  /* clip-path:polygon(0 0, 0 0, 0 0); */
 }
 
 /* 기본 스타일 */
@@ -110,6 +109,17 @@ body {
   color: #fff;
   text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
 }
+
+.is-active .menu-button {
+  color: #ff0;
+}
+
+.is-active .menu-button::after {
+  content: "";
+  display: block;
+  border-top: 2px solid #212121;
+}
+
 
 .menu-item {
   float: left;  
