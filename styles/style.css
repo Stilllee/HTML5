@@ -274,7 +274,7 @@ html에대해, 가상요소는 형제관계.
   animation-fill-mode: forwards; */
   /* display: inline-block; */
   animation: moveEffect 1000ms ease-in-out forwards;
-  position:relative;
+  position:absolute;
   z-index: 1;
 }
 
