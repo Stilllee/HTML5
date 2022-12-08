@@ -38,9 +38,6 @@ body {
   background: url("./images/bg_flower.png") no-repeat 50% 0, #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%); 
 }
 
-
-
-
 /* 레이아웃 */
 .header, .visual, .main, .slogan, .footer-inner {  
   width: 940px;  
