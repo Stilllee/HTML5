@@ -373,48 +373,6 @@ html에대해, 가상요소는 형제관계.
   color: orangered;
 }
 
-/* .login-form fieldset {
-  position: relative;
-  padding: 5px 0;
-}
-
-.user-email label, .user-pw label {
-  display: inline-block;
-  width: 55px;
-  margin-bottom: 10px;
-}
-
-.user-email input, .user-pw input {
-  width: 90px;
-}
-
-.login-form::after {
-  content: "";
-  display: block;
-  border-bottom: 1px solid #000;
-}
-
-.login-button {
-  background-color: orangered;
-  color: #fff;
-  border: none;
-  width: 52px;
-  height: 52px;
-  border-radius: 3px;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.sign {
-  background-color: #fff;
-  border-radius: 0 0 5px 5px;
-  padding: 0 10px 10px 10px;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 10px;
-} */
-
 .group2 {
   background-color: teal;
   width: 380px;
@@ -422,6 +380,28 @@ html에대해, 가상요소는 형제관계.
 .group3 {
   background-color: thistle;
   width: 190px;
+}
+
+/* 유효성 검사 배너 */
+
+.validation-list {
+  margin-top: 25px;
+}
+
+.validation-list li {   
+  margin-top: 10px;
+}
+
+.validation-list a {
+  display: block;
+  background: url("./images/validation_icon.png") no-repeat 20px 50%, #ccc linear-gradient(to bottom, #ccc, #eee);
+  padding: 8px 40px;
+  border-radius: 30px; 
+  border: 1px solid #aaa;
+}
+
+.validation-list a:hover, .validation-list a:focus {
+  color: #f00;
 }
 
 /* 슬로건 */
