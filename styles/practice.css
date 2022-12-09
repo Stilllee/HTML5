@@ -4,7 +4,7 @@
 
 
 /* 숨김 콘텐츠 */
-.a11y-hidden{
+.a11y-hidden, legend{
   position:absolute;
   width: 1px;
   height: 1px;
@@ -26,6 +26,10 @@ html {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+input, button {
+  border: 0;
 }
 
 /* 본문 스타일 */
@@ -287,9 +291,115 @@ html에대해, 가상요소는 형제관계.
 }
 
 .group1 {
-  background-color: tomato;
   width: 250px;
 }
+
+.login {
+  background: orange radial-gradient(circle at right top, orange, orangered);
+  border-radius: 5px;
+  box-shadow: 5px 5px 0 0 #aaa;
+  padding: 10px;
+}
+
+.login-title {
+  color: #ff0;
+  text-indent: 10px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.login-form {
+  background-color: #fff;
+  margin-top: 10px;  
+  border-radius: 5px 5px 0 0;
+  padding: 10px 10px 0 10px;
+}
+
+.login-form fieldset {
+  position: relative;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #aaa;
+}
+
+.user-email,
+.user-pw {
+  margin-bottom: 5px;
+}
+
+.login-form label {
+  display: inline-block;
+  width: 4em;
+}
+
+.login-form input {
+  width: 90px;
+  height: 24px;
+  border: 1px solid #aaa;
+  padding: 1px 1px 1px 5px;
+  border-radius: 3px;
+}
+
+.login-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 53px;
+  background-color: orangered;
+  color: #fff;
+  border-radius: 3px;
+  padding: 0 8px;
+  font-size: 13px;
+}
+
+.sign {
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  padding: 4px 10px;
+}
+
+.sign li {
+  display: inline-block;
+}
+
+.sign li:first-child {
+  margin-right: 33px;
+}
+
+.sign a {
+  display: inline-block;
+  padding: 6px 0;
+  letter-spacing: -1px;
+}
+
+.sign a::before {
+  content: "\e804";
+  font-family: "fontello";
+  color: orangered;
+  margin-right: 5px;
+}
+
+.validation-list {
+  margin-top: 25px;
+}
+
+.validation-list li {
+  margin-top: 10px;
+}
+
+.validation-list a {
+  background: url("./images/validation_icon.png") no-repeat 25px 50% ,#ccc linear-gradient(to bottom, #ccc, #eee);
+  padding: 0 15px 0 55px;
+  border-radius: 30px;
+  line-height: 30px;
+  border: 1px solid #aaa;
+  cursor: pointer;
+  display: block;
+}
+
+.validation-list a:hover, .validation-list a:focus {
+  color: #f00;
+}
+
 .group2 {
   background-color: teal;
   width: 380px;
