@@ -1,4 +1,5 @@
 @import url("./fonts.css");
+@import url("./fontello.css");
 @import url("./normalize.css");
 @import url("./reset.css");
 
@@ -374,7 +375,6 @@ html에대해, 가상요소는 형제관계.
 }
 
 .group2 {
-  background-color: teal;
   width: 380px;
 }
 .group3 {
@@ -402,6 +402,179 @@ html에대해, 가상요소는 형제관계.
 
 .validation-list a:hover, .validation-list a:focus {
   color: #f00;
+}
+
+/* 웹 관련 용어 */
+.term {
+  margin-top: 20px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+}
+
+.term-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.term-list {
+  margin-top: 10px;
+}
+
+.term-list div {
+  margin-top: 10px;
+  display: flow-root;
+}
+
+.term-list-subject, .term-list-brief {
+  float: right;
+  width: 145px;
+}
+
+.term-list-subject {
+  color: #296897;
+  font-weight: 500;
+}
+
+.term-list-thumbnail {
+  float: left;
+}
+.term-list-thumbnail img {
+  vertical-align: middle;
+}
+
+.term-list-brief {
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+.cross .term-list-subject, .cross .term-list-brief {
+  float: left;
+}
+
+.cross .term-list-thumbnail {
+  float: right;
+}
+
+/* 검색 폼 */
+.search-form {
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+  border: 1px solid #aaa;
+  border-radius: 15px 15px 0 0;
+  padding: 15px 25px 10px;
+}
+
+.search-form-inner {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.form-group {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.form-group-label {
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.form-group-input {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  height: 24px;
+  padding: 1px 1px 1px 5px;
+  flex-grow: 1;
+  font-size: 1.2rem;
+  min-width: 0;
+  width: 100%;
+  /* 브라우저마다(파이어폭스 등) 나름의 규격이 적용되어있을 수 있기때문에 왜곡됨. min-widthd와 width로 값을 주어 해결 */
+}
+
+.search-button {
+  flex-shrink: 0;
+  background-color: #000;
+  color: #fff;
+  height: 24px;
+  border: 0;
+  border-radius: 3px;
+  padding: 0 10px;
+  font-size: 1.2rem;
+}
+
+/* 공지사항 및 자료실 */
+.board {
+  background-color: #ff0;
+  margin-top: 20px;
+  position: relative;
+}
+
+.tab-list {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.tab {
+  border: 1px solid #aaa;
+  background-color: #ccc;
+  border-radius: 5px 5px 0 0;
+  padding: 5px 10px;
+  color: #666;
+}
+
+.is-select.tab {
+  background-color: #fff;
+  color: #e85e2C;
+  border-color: currentColor currentColor #fff currentColor;
+}
+
+.tab-panel {
+  display: none;
+  background-color: palevioletred;
+  margin-top: 15px;
+}
+
+.is-select.tab-panel {
+  display: block;
+}
+
+.board-list li {
+  background-color: paleturquoise;
+  margin-top: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.board-list a{
+  flex-grow: 1;
+  background-color: slateblue;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* white-space에 nowrap(줄바꿈방지), overflow에 hidden(튀어나오는 것 자르기), text-overflow에 ellipsis(말줄임표)로 자연스럽게 자름 */
+}
+
+.board-list time{
+  flex-shrink: 0;
+  margin-lsft: 10px;
+}
+
+.board-more {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+  /* padding이 필수는 아님! 키보드, 탭으로 접근했을 때 영역을 더 크게 만들어줌 */
+}
+
+.icon-plus::before {
+  color: hsla(110, 50%, 30%, 1);
 }
 
 /* 슬로건 */
