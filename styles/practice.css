@@ -1,4 +1,5 @@
 @import url("./fonts.css");
+@import url("./fontello.css");
 @import url("./normalize.css");
 @import url("./reset.css");
 
@@ -28,23 +29,14 @@ a {
   text-decoration: none;
 }
 
-input, button {
-  border: 0;
-}
-
 /* 본문 스타일 */
 
 body {
   /* em, rem 단위를 사용해보기 */
   color: #212121;
   font-size: 1.4rem;
-  font-family: "Pretendard Variable", Pretendard, -apple-system,
-    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
-    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  background: url("./images/bg_flower.png") no-repeat 50% 0,
-    #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%)
-      repeat 0 0;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  background: url("./images/bg_flower.png") no-repeat 50% 0, #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%); 
 }
 
 /* 레이아웃 */
@@ -90,9 +82,6 @@ body {
   text-transform: uppercase;  
 }
 /* 마지막 li요소에 포함된 a요소를 선택하여 오른쪽 padding값을 0으로 재정의 하는 방법 */
-.member li:last-child a {
-  padding-right: 0;
-}
 
 .divider {
   margin-right: 4px;
@@ -116,6 +105,7 @@ body {
 }
 
 .menu-item {
+  position: relative;
   float: left;  
   border-left: 2px solid #fff;  
 }
@@ -224,13 +214,15 @@ html에대해, 가상요소는 형제관계.
 @keyframes moveEffect {
   0% {
     font-size: 12px;
-    color: hsla(0, 0, 0, 0);
+    /* color: rgba(0, 0, 0, 0.2); */
+    color: hsla(0 0% 0% 0);
     transform: translate(0,0);
   } 
   100% {
     font-size: 24px;
-    color: hsla(0, 0, 0, 1);
-    transform: translate(400px,75px);
+    /* color: rgba(0, 0, 0, 1); */
+    color: hsla(0 0% 0% 1);
+    transform: translate(400px, 75px);
   }
 }
 
@@ -255,34 +247,42 @@ html에대해, 가상요소는 형제관계.
   height: 100%;
   top: 0;
   left: 0;
+  /* animation-name: fadeEffect;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; */
   animation: fadeEffect 2000ms infinite alternate;
 }
 
 .visual::before {
-  background: url("./images/ani_flower_01.png") no-repeat 0 -10px,
-  url("./images/ani_flower_02.png") no-repeat 600px 0
+  background: url("./images/ani_flower_01.png") no-repeat 0 -10px, url("./images/ani_flower_02.png") no-repeat 600px 0;
 }
 
 .visual::after {
-  background: url("./images/ani_flower_03.png") no-repeat 300px 0,
-  url("./images/ani_flower_04.png") no-repeat 800px 0;
+  background: url("./images/ani_flower_03.png") no-repeat 35% 0px, url("./images/ani_flower_04.png") no-repeat 800px 0;
   animation-delay: 1000ms;
 }
 
 .visual-text {
+  background-color: transparent;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  /* animation-name: moveEffect;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards; */
+  /* display: inline-block; */
   animation: moveEffect 1000ms ease-in-out forwards;
-  position: relative;
+  position:absolute;
   z-index: 1;
 }
 
-
 /* 메인 */
 .main {
-  background: lightcoral;
-  height: 50vh;
+  background: #fff;
+  min-height: 450px;
   display: flow-root;
-  padding: 0 15px;
+  padding: 30px 15px;
+  border-radius: 15px 15px 0 0;
 }
 
 .group {
@@ -295,34 +295,33 @@ html에대해, 가상요소는 형제관계.
 }
 
 .login {
-  background: orange radial-gradient(circle at right top, orange, orangered);
-  border-radius: 5px;
   box-shadow: 5px 5px 0 0 #aaa;
+  background: orange radial-gradient(circle at right top, orange, orangered);
   padding: 10px;
+  border-radius: 5px;
 }
 
 .login-title {
   color: #ff0;
-  text-indent: 10px;
   font-size: 15px;
   font-weight: 700;
+  text-indent: 10px;
 }
 
 .login-form {
   background-color: #fff;
-  margin-top: 10px;  
+  margin-top: 10px;
   border-radius: 5px 5px 0 0;
-  padding: 10px 10px 0 10px;
+  padding: 10px 10px 0px 10px;
 }
 
-.login-form fieldset {
+.login fieldset {
   position: relative;
-  padding-bottom: 5px;
   border-bottom: 1px solid #aaa;
+  padding-bottom: 5px;
 }
 
-.user-email,
-.user-pw {
+.user-email, .user-pw {
   margin-bottom: 5px;
 }
 
@@ -339,15 +338,16 @@ html에대해, 가상요소는 형제관계.
   border-radius: 3px;
 }
 
-.login-button {
+.login button {
   position: absolute;
   top: 0;
   right: 0;
   height: 53px;
   background-color: orangered;
   color: #fff;
-  border-radius: 3px;
+  border: 0;
   padding: 0 8px;
+  border-radius: 3px;
   font-size: 13px;
 }
 
@@ -355,58 +355,222 @@ html에대해, 가상요소는 형제관계.
   background-color: #fff;
   border-radius: 0 0 5px 5px;
   padding: 4px 10px;
-}
-
-.sign li {
-  display: inline-block;
-}
-
-.sign li:first-child {
-  margin-right: 33px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }
 
 .sign a {
-  display: inline-block;
+  display: block;
   padding: 6px 0;
   letter-spacing: -1px;
+  /* letter-spacing은 자간 설정 */
 }
 
 .sign a::before {
-  content: "\e804";
-  font-family: "fontello";
+  content: "\e803";
+  font-family: 'fontello';
+  margin-right: 3px;
   color: orangered;
-  margin-right: 5px;
 }
+
+.group2 {
+  width: 380px;
+}
+.group3 {
+  background-color: thistle;
+  width: 190px;
+}
+
+/* 유효성 검사 배너 */
 
 .validation-list {
   margin-top: 25px;
 }
 
-.validation-list li {
+.validation-list li {   
   margin-top: 10px;
 }
 
 .validation-list a {
-  background: url("./images/validation_icon.png") no-repeat 25px 50% ,#ccc linear-gradient(to bottom, #ccc, #eee);
-  padding: 0 15px 0 55px;
-  border-radius: 30px;
-  line-height: 30px;
-  border: 1px solid #aaa;
-  cursor: pointer;
   display: block;
+  background: url("./images/validation_icon.png") no-repeat 20px 50%, #ccc linear-gradient(to bottom, #ccc, #eee);
+  padding: 8px 40px;
+  border-radius: 30px; 
+  border: 1px solid #aaa;
 }
 
 .validation-list a:hover, .validation-list a:focus {
   color: #f00;
 }
 
-.group2 {
-  background-color: teal;
-  width: 380px;
+/* 웹 관련 용어 */
+.term {
+  margin-top: 20px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
 }
-.group3 {
-  background-color: thistle;
-  width: 190px;
+
+.term-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.term-list {
+  margin-top: 10px;
+}
+
+.term-list div {
+  margin-top: 10px;
+  display: flow-root;
+}
+
+.term-list-subject, .term-list-brief {
+  float: right;
+  width: 145px;
+}
+
+.term-list-subject {
+  color: #296897;
+  font-weight: 500;
+}
+
+.term-list-thumbnail {
+  float: left;
+}
+.term-list-thumbnail img {
+  vertical-align: middle;
+}
+
+.term-list-brief {
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+.cross .term-list-subject, .cross .term-list-brief {
+  float: left;
+}
+
+.cross .term-list-thumbnail {
+  float: right;
+}
+
+/* 검색 폼 */
+.search-form {
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+  border: 1px solid #aaa;
+  border-radius: 15px 15px 0 0;
+  padding: 15px 25px 10px;
+}
+
+.search-form-inner {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.form-group {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.form-group-label {
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.form-group-input {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  height: 24px;
+  padding: 1px 1px 1px 5px;
+  flex-grow: 1;
+  font-size: 1.2rem;
+  min-width: 0;
+  width: 100%;
+  /* 브라우저마다(파이어폭스 등) 나름의 규격이 적용되어있을 수 있기때문에 왜곡됨. min-widthd와 width로 값을 주어 해결 */
+}
+
+.search-button {
+  flex-shrink: 0;
+  background-color: #000;
+  color: #fff;
+  height: 24px;
+  border: 0;
+  border-radius: 3px;
+  padding: 0 10px;
+  font-size: 1.2rem;
+}
+
+/* 공지사항 및 자료실 */
+.board {
+  margin-top: 20px;
+  position: relative;
+}
+
+.tab-list {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.tab {
+  border: 1px solid #aaa;
+  background-color: #ccc;
+  border-radius: 5px 5px 0 0;
+  padding: 5px 10px;
+  color: #666;
+}
+
+.is-select.tab {
+  background-color: #fff;
+  color: #e85e2C;
+  border-color: currentColor currentColor #fff currentColor;
+}
+
+.tab-panel {
+  display: none;
+  margin-top: 15px;
+}
+
+.is-select.tab-panel {
+  display: block;
+}
+
+.board-list li {
+  margin-top: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.board-list a{
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* white-space에 nowrap(줄바꿈방지), overflow에 hidden(튀어나오는 것 자르기), text-overflow에 ellipsis(말줄임표)로 자연스럽게 자름 */
+}
+
+.board-list time{
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+
+.board-more {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+  /* padding이 필수는 아님! 키보드, 탭으로 접근했을 때 영역을 더 크게 만들어줌 */
+}
+
+.icon-plus::before {
+  color: hsla(110, 50%, 30%, 1);
 }
 
 /* 슬로건 */
