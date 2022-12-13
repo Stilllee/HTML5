@@ -2,6 +2,7 @@
 @import url("./fontello.css");
 @import url("./normalize.css");
 @import url("./reset.css");
+@import url("./module.css");
 
 
 /* 숨김 콘텐츠 */
@@ -378,7 +379,6 @@ html에대해, 가상요소는 형제관계.
   width: 380px;
 }
 .group3 {
-  background-color: thistle;
   width: 190px;
 }
 
@@ -591,7 +591,6 @@ html에대해, 가상요소는 형제관계.
 }
 
 .news-title {
-  color: #e85e2c;
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -627,7 +626,7 @@ html에대해, 가상요소는 형제관계.
 }
 
 .news-item-thumbnail img {
-  box-shadow: 0 15px 10px 5px #ccc;
+  box-shadow: 0 10px 50px 5px #ccc;
   margin-bottom: 15px;
 }
 
@@ -637,6 +636,96 @@ html에대해, 가상요소는 형제관계.
   right: -8px;
   padding: 8px;
   /* position:absolute나 float는 block 속성이 된다. 모양은 인라인이지만 속성은inline아님inline-block도 아님 다만 width등을 안 주면 auto니까 컨텐츠만큼 공간차지가 되는 것*/
+}
+
+/* 신규 이벤트 및 관련 사이트 */
+
+.event {
+  border-bottom: 1px solid #aaa;
+}
+
+.event-title {
+  display: inline-block;
+}
+
+.event-button-wrapper {
+  height: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 5px;
+  float: right;
+}
+
+/* IR 기법 => Image Replacement */
+.event-button {
+  width: 19px;
+  height: 18px;
+  border: 0;
+  padding: 18px 0 0 0;
+  background: url("./images/back_forward.png") no-repeat; 
+  /* text-indent: -9999px; */
+}
+
+.event-button-next {  
+  background-position: -36px 0;
+}
+.event-button-prev {  
+  outline-offset: -2px;
+}
+
+.event-thumbnail img {
+  border: 1px solid #aaa;
+  box-shadow: 5px 5px 0 0 #ccc;
+}
+
+.event-thumbnail, .event-brief {
+  margin: 10px 0;
+}
+
+.event-brief {
+  line-height: 1.5;
+}
+
+.related {
+  margin-top: 10px;
+}
+
+.related-list {
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  height: 27px;
+  overflow: hidden;
+  /* transition-property: background-color, border-radius;
+  transition-duration: 2000ms, 2000ms;
+  transition-delay: 0ms, 2000ms;
+  transition-timing-function: ease-in-out;
+  transition: background-color 2000ms 0ms ease-in-out, border-radius 2000ms 2000ms ease-in-out; */
+  transition: height 400ms, padding 400ms 400ms;
+  padding: 0;
+}
+
+.related-list li {
+  height: 25px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.related-list a {
+  flex-grow: 1;
+  padding: 0 10px;
+}
+
+.related-list:hover, .related-list:focus {
+  height: 147px;
+  padding: 10px 0;
 }
 
 /* 슬로건 */
