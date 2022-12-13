@@ -2,6 +2,7 @@
 @import url("./fontello.css");
 @import url("./normalize.css");
 @import url("./reset.css");
+@import url("./module.css");
 
 
 /* 숨김 콘텐츠 */
@@ -571,6 +572,147 @@ html에대해, 가상요소는 형제관계.
 
 .icon-plus::before {
   color: hsla(110, 50%, 30%, 1);
+}
+
+.news {
+  margin-top: 20px;
+  position: relative;
+}
+
+.news::before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 80%;
+  height: 1px;
+  background: #aaa linear-gradient(to right, #ccc, #fff);
+}
+
+.news-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.news-link {
+  display: block;
+}
+
+.news-item {
+  margin-top: 35px;
+  position: relative;
+  display: flow-root;
+}
+
+.news-item-title {
+  font-weight: 500;
+  width: 250px;
+  float: right;
+}
+
+.news-item-date {
+  display: block;
+  margin: 5px 0 10px;
+  width: 250px;
+  float: right;
+}
+
+.news-item-brief {
+  line-height: 1.5;
+  width: 250px;
+  float: right;
+}
+
+.news-item-thumbnail img {
+  box-shadow: 0 15px 10px 5px #ccc;
+  margin-bottom: 15px;
+}
+
+.news-item-thumbnail figcaption {
+  width: 112px;
+  text-align: center;
+}
+
+.news-more {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
+
+.event {
+  border-bottom: 1px solid #aaa;
+}
+.event-title {
+  display: inline-block;
+}
+.event-button-wrapper {
+  height: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 5px;
+  float: right;
+}
+
+.event-button {
+  width: 19px;
+  height: 18px;
+  border: 0;
+  padding: 18px 0 0 0;
+  background: url("./images/back_forward.png") no-repeat;
+  outline-offset: -2px;
+}
+.event-button-next {
+  background-position: -36px 0;
+}
+
+.event-thumbnai, .event-brief {
+  margin: 10px 0;
+}
+
+.event-thumbnail img {
+  border: 1px solid #aaa;
+  box-shadow: 5px 5px 0 0 #ccc;
+}
+
+.event-brief {
+  line-height: 1.5;
+}
+
+.related {
+  margin-top: 10px;
+}
+
+.related-list {
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  margin-top: 10px;
+  height: 27px;
+  overflow: hidden;
+  transition: height 400ms 0ms, padding 400ms 400ms;
+}
+
+.related-list li {
+  height: 25px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.related-list a {
+  flex-grow: 1;
+  padding: 0 10px;
+}
+
+.related-list:hover,
+.related-list:focus {
+  height: 147px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /* 슬로건 */
