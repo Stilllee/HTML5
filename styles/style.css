@@ -666,14 +666,16 @@ html에대해, 가상요소는 형제관계.
   padding: 18px 0 0 0;
   background: url("./images/back_forward.png") no-repeat; 
   /* text-indent: -9999px; */
+  outline-offset: -2px;
 }
 
 .event-button-next {  
   background-position: -36px 0;
 }
-.event-button-prev {  
+
+/* .event-button-prev {  
   outline-offset: -2px;
-}
+} */
 
 .event-thumbnail img {
   border: 1px solid #aaa;
