@@ -4,19 +4,21 @@
 @import url("./reset.css");
 @import url("./module.css");
 
-
 /* 숨김 콘텐츠 */
-.a11y-hidden, legend{
-  position:absolute;
+.a11y-hidden,
+legend {
+  position: absolute;
   width: 1px;
   height: 1px;
   overflow: hidden;
-  clip-path:polygon(0 0, 0 0, 0 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
 }
 
 /* 기본 스타일 */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -36,13 +38,21 @@ body {
   /* em, rem 단위를 사용해보기 */
   color: #212121;
   font-size: 1.4rem;
-  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  background: url("./images/bg_flower.png") no-repeat 50% 0, #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%); 
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  background: url("./images/bg_flower.png") no-repeat 50% 0,
+    #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%);
 }
 
 /* 레이아웃 */
-.header, .visual, .main, .slogan, .footer-inner {  
-  width: 940px;  
+.header,
+.visual,
+.main,
+.slogan,
+.footer-inner {
+  width: 940px;
   margin: 0 auto;
 }
 
@@ -77,10 +87,10 @@ body {
   display: inline-block;
 }
 
-.member a{
+.member a {
   padding: 6px 10px;
   display: inherit;
-  text-transform: uppercase;  
+  text-transform: uppercase;
 }
 /* 마지막 li요소에 포함된 a요소를 선택하여 오른쪽 padding값을 0으로 재정의 하는 방법 */
 
@@ -89,31 +99,38 @@ body {
 }
 
 /* 메인 메뉴 */
-.navigation{
+.navigation {
   padding-bottom: 40px;
 }
 .menu {
   border-top: 2px solid #212121;
-  background: #e85e2c linear-gradient(to bottom, #ef9126 0%, #e85e2c 35%, #e85e2c 70%, #ef9126 100%);
+  background: #e85e2c
+    linear-gradient(
+      to bottom,
+      #ef9126 0%,
+      #e85e2c 35%,
+      #e85e2c 70%,
+      #ef9126 100%
+    );
   border-radius: 0 0 5px 5px;
   padding-left: 230px;
   height: 47px;
   position: relative;
 }
 
-.menu > li:nth-child(-n+3) {
+.menu > li:nth-child(-n + 3) {
   position: relative;
 }
 
 .menu-item {
   position: relative;
-  float: left;  
-  border-left: 2px solid #fff;  
+  float: left;
+  border-left: 2px solid #fff;
 }
 
 /* 구체성 -> 10점 */
 .menu-button {
-  border: 0;  
+  border: 0;
   background: transparent;
   padding: 0 23px;
   line-height: 45px;
@@ -161,11 +178,15 @@ html에대해, 가상요소는 형제관계.
   padding: 4px 0;
 }
 
-.menu-html, .menu-css, .menu-standards {
+.menu-html,
+.menu-css,
+.menu-standards {
   left: 0;
 }
 
-.menu-accessibility, .menu-qna, .menu-archive {
+.menu-accessibility,
+.menu-qna,
+.menu-archive {
   right: 0;
 }
 
@@ -181,22 +202,23 @@ html에대해, 가상요소는 형제관계.
 
 .sub-menu a::before {
   content: "\f192";
-  font-family: 'fontello';
+  font-family: "fontello";
   font-weight: normal;
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
-  margin-right: .2em;
+  margin-right: 0.2em;
   text-align: center;
   font-variant: normal;
   text-transform: none;
   line-height: 1em;
-  margin-left: .2em;
+  margin-left: 0.2em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.sub-menu a:hover::before, .sub-menu a:focus::before {
+.sub-menu a:hover::before,
+.sub-menu a:focus::before {
   content: "\e800";
 }
 
@@ -205,7 +227,8 @@ html에대해, 가상요소는 형제관계.
   padding: 6px 0;
 }
 
-.sub-menu a:hover, .sub-menu a:focus {
+.sub-menu a:hover,
+.sub-menu a:focus {
   color: #f00;
 }
 
@@ -217,8 +240,8 @@ html에대해, 가상요소는 형제관계.
     font-size: 12px;
     /* color: rgba(0, 0, 0, 0.2); */
     color: hsla(0 0% 0% 0);
-    transform: translate(0,0);
-  } 
+    transform: translate(0, 0);
+  }
   100% {
     font-size: 24px;
     /* color: rgba(0, 0, 0, 1); */
@@ -241,7 +264,8 @@ html에대해, 가상요소는 형제관계.
   position: relative;
 }
 
-.visual::before, .visual::after {
+.visual::before,
+.visual::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -256,24 +280,26 @@ html에대해, 가상요소는 형제관계.
 }
 
 .visual::before {
-  background: url("./images/ani_flower_01.png") no-repeat 0 -10px, url("./images/ani_flower_02.png") no-repeat 600px 0;
+  background: url("./images/ani_flower_01.png") no-repeat 0 -10px,
+    url("./images/ani_flower_02.png") no-repeat 600px 0;
 }
 
 .visual::after {
-  background: url("./images/ani_flower_03.png") no-repeat 35% 0px, url("./images/ani_flower_04.png") no-repeat 800px 0;
+  background: url("./images/ani_flower_03.png") no-repeat 35% 0px,
+    url("./images/ani_flower_04.png") no-repeat 800px 0;
   animation-delay: 1000ms;
 }
 
 .visual-text {
   background-color: transparent;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   /* animation-name: moveEffect;
   animation-duration: 1000ms;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards; */
   /* display: inline-block; */
   animation: moveEffect 1000ms ease-in-out forwards;
-  position:absolute;
+  position: absolute;
   z-index: 1;
 }
 
@@ -322,7 +348,8 @@ html에대해, 가상요소는 형제관계.
   padding-bottom: 5px;
 }
 
-.user-email, .user-pw {
+.user-email,
+.user-pw {
   margin-bottom: 5px;
 }
 
@@ -370,7 +397,7 @@ html에대해, 가상요소는 형제관계.
 
 .sign a::before {
   content: "\e803";
-  font-family: 'fontello';
+  font-family: "fontello";
   margin-right: 3px;
   color: orangered;
 }
@@ -388,19 +415,21 @@ html에대해, 가상요소는 형제관계.
   margin-top: 25px;
 }
 
-.validation-list li {   
+.validation-list li {
   margin-top: 10px;
 }
 
 .validation-list a {
   display: block;
-  background: url("./images/validation_icon.png") no-repeat 20px 50%, #ccc linear-gradient(to bottom, #ccc, #eee);
+  background: url("./images/validation_icon.png") no-repeat 20px 50%,
+    #ccc linear-gradient(to bottom, #ccc, #eee);
   padding: 8px 40px;
-  border-radius: 30px; 
+  border-radius: 30px;
   border: 1px solid #aaa;
 }
 
-.validation-list a:hover, .validation-list a:focus {
+.validation-list a:hover,
+.validation-list a:focus {
   color: #f00;
 }
 
@@ -427,7 +456,8 @@ html에대해, 가상요소는 형제관계.
   display: flow-root;
 }
 
-.term-list-subject, .term-list-brief {
+.term-list-subject,
+.term-list-brief {
   float: right;
   width: 145px;
 }
@@ -449,7 +479,8 @@ html에대해, 가상요소는 형제관계.
   line-height: 1.5;
 }
 
-.cross .term-list-subject, .cross .term-list-brief {
+.cross .term-list-subject,
+.cross .term-list-brief {
   float: left;
 }
 
@@ -528,7 +559,7 @@ html에대해, 가상요소는 형제관계.
 
 .is-select.tab {
   background-color: #fff;
-  color: #e85e2C;
+  color: #e85e2c;
   border-color: currentColor currentColor #fff currentColor;
 }
 
@@ -548,7 +579,7 @@ html에대해, 가상요소는 형제관계.
   justify-content: space-between;
 }
 
-.board-list a{
+.board-list a {
   flex-grow: 1;
   white-space: nowrap;
   overflow: hidden;
@@ -556,7 +587,7 @@ html에대해, 가상요소는 형제관계.
   /* white-space에 nowrap(줄바꿈방지), overflow에 hidden(튀어나오는 것 자르기), text-overflow에 ellipsis(말줄임표)로 자연스럽게 자름 */
 }
 
-.board-list time{
+.board-list time {
   flex-shrink: 0;
   margin-left: 10px;
 }
@@ -664,12 +695,12 @@ html에대해, 가상요소는 형제관계.
   height: 18px;
   border: 0;
   padding: 18px 0 0 0;
-  background: url("./images/back_forward.png") no-repeat; 
+  background: url("./images/back_forward.png") no-repeat;
   /* text-indent: -9999px; */
   outline-offset: -2px;
 }
 
-.event-button-next {  
+.event-button-next {
   background-position: -36px 0;
 }
 
@@ -682,7 +713,8 @@ html에대해, 가상요소는 형제관계.
   box-shadow: 5px 5px 0 0 #ccc;
 }
 
-.event-thumbnail, .event-brief {
+.event-thumbnail,
+.event-brief {
   margin: 10px 0;
 }
 
@@ -725,17 +757,131 @@ html에대해, 가상요소는 형제관계.
   padding: 0 10px;
 }
 
-.related-list:hover, .related-list:focus {
+.related-list:hover,
+.related-list:focus {
   height: 147px;
   padding: 10px 0;
 }
 
+/* 인기 사이트 */
+
+.favorite {
+  position: relative;
+}
+
+.favorite-list {
+  list-style-type: none;
+  /* counter-reset: number 10; */
+}
+
+.favorite-list li {
+  margin-top: 10px;
+  counter-increment: number;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.favorite-list li::before {
+  content: counter(number);
+  background-color: #aaa;
+  color: #fff;
+  padding: 1px 6px;
+  font-size: 1.2rem;
+  margin-right: 5px;
+  border-radius: 3px;
+  display: inline-block;
+  width: 1.5em;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.favorite-list a {
+  flex-grow: 1;
+}
+
+.up,
+.stop,
+.down {
+  display: inline-block;
+  width: 20px;
+  height: 11px;
+  background: url("./images/rank.png") no-repeat 100% 0;
+  /* background: url("./images/rank.png") no-repeat 0 0; */
+}
+
+.stop {
+  background-position: 100% 49%;
+  /* background-position: 0 -22px; */
+}
+
+.down {
+  background-position: 100% 100%;
+  /* background-position: 0 -44px; */
+}
+
+/* .no1::before {
+  content: "1";
+}
+.no2::before {
+  content: "2";
+}
+.no3::before {
+  content: "3";
+}
+.no4::before {
+  content: "4";
+} */
+
+.favorite-more {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
+
 /* 슬로건 */
 .slogan {
-  background: lightgreen;
-  height: 10vh;
   clear: both;
+  /* main에 flow-root를 주었기 때문에 클리어보스를 안써도 되지만, 특정 브라우저에서 flow-root를 지원하지 않는 경우 레이아웃이 무너질 것을 우려하여 안정장치로 clear: both를 써준 것. */
+  position: relative;
+  padding: 15px 100px 15px 180px;
 }
+
+.slogan-title {
+  width: 110px;
+  height: 83px;
+  text-align: center;
+  line-height: 83px;
+  position: absolute;
+  bottom: -25px;
+  left: 35px;
+}
+
+.slogan-title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./images/coffee.png") no-repeat;
+}
+
+.slogan-content {
+  color: #a09784;
+}
+
+.slogan-content q::before {
+  display: inline-block;
+  font-size: 3rem;
+  transform: translateY(10px);
+}
+
+.slogan-content q::after {
+  content: "";
+}
+
 /* 풋터 */
 .footer {
   background: #ccc
@@ -743,7 +889,40 @@ html에대해, 가상요소는 형제관계.
 }
 
 .footer-inner {
-  background: lightslategray;
-  height: 15vh;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 20px;
+  padding: 20px 0;
 }
 
+.footer-logo {
+  width: 150px;
+  padding: 20px 0 0 35px;
+}
+
+.footer-inner-wrapper {
+  flex: 1 1 auto;
+}
+
+.guide-list {
+  background-color: #7b8385;
+  color: #fff;
+  padding: 4px 45px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  text-transform: uppercase;
+  border-radius: 30px;
+}
+
+.guide-list a {
+  display: block;
+  padding: 6px 10px;
+}
+
+.address,
+.copyright {
+  display: block;
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
